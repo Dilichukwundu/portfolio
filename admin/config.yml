@@ -9,9 +9,9 @@ public_folder: "/assets"
 
 collections:
   - name: "database"
-    label: "Portfolio Database"
+    label: "Site Database"
     files:
-      - label: "Case Studies List"
+      - label: "Project Case Studies"
         name: "projects"
         file: "data.json"
         fields:
@@ -19,7 +19,7 @@ collections:
             name: "portfolioProjects"
             widget: "list"
             fields:
-              - {label: "Unique Project URL Slug (e.g. summit-os)", name: "id", widget: "string"}
+              - {label: "Unique Project URL Slug", name: "id", widget: "string"}
               - {label: "Project Title", name: "title", widget: "string"}
               - {label: "Short Subtitle Label", name: "desc", widget: "string"}
               - {label: "Category Tag", name: "tag", widget: "select", options: ["Brand Design", "Motion Design"]}
@@ -34,3 +34,64 @@ collections:
                   - {label: "Client Challenge Text", name: "clientChallenge", widget: "text"}
                   - {label: "Creative Solution Text", name: "solutionStrategy", widget: "text"}
                   - {label: "Gallery Media", name: "gallery", widget: "list", field: {label: "Gallery Content", name: "image", widget: "file"}}
+
+      - label: "Global Site Settings"
+        name: "global"
+        file: "data.json"
+        fields:
+          - label: "Global Settings"
+            name: "siteSettings"
+            widget: "object"
+            fields:
+              - {label: "Your Full Name", name: "userName", widget: "string"}
+              - {label: "Professional Role", name: "userRole", widget: "string"}
+              - {label: "Avatar Image", name: "userAvatar", widget: "file"}
+              - {label: "Availability Status", name: "statusText", widget: "string"}
+              - {label: "Home Hero Heading", name: "mainHeading", widget: "text"}
+              - {label: "Contact Email", name: "contactEmail", widget: "string"}
+
+      - label: "About Page Content"
+        name: "about"
+        file: "data.json"
+        fields:
+          - label: "About Page"
+            name: "aboutPage"
+            widget: "object"
+            fields:
+              - {label: "About Hero Image", name: "aboutHero", widget: "file"}
+              - label: "Biography Sections"
+                name: "bio"
+                widget: "list"
+                field: {label: "Paragraph", name: "text", widget: "text"}
+              - label: "Key Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - {label: "Stat Value (e.g. 50+)", name: "value", widget: "string"}
+                  - {label: "Stat Label (e.g. Clients)", name: "label", widget: "string"}
+
+      - label: "Contact Page Content"
+        name: "contact"
+        file: "data.json"
+        fields:
+          - label: "Contact Page"
+            name: "contactPage"
+            widget: "object"
+            fields:
+              - {label: "Contact Hero Text", name: "heading", widget: "text"}
+              - {label: "Contact Paragraph", name: "description", widget: "text"}
+              - label: "Social Links"
+                name: "socials"
+                widget: "list"
+                fields:
+                  - {label: "Platform Name", name: "platform", widget: "string"}
+                  - {label: "URL", name: "url", widget: "string"}
+
+      - label: "Playground Gallery"
+        name: "playground"
+        file: "data.json"
+        fields:
+          - label: "Playground Grid"
+            name: "playgroundItems"
+            widget: "list"
+            field: {label: "Media (Image/Video)", name: "media", widget: "file"}

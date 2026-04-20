@@ -1,4 +1,39 @@
 {
+  "siteSettings": {
+    "userName": "Dilichukwu Udemba",
+    "userRole": "Brand & Motion Designer",
+    "userAvatar": "/assets/profile.jpg",
+    "statusText": "Available to work",
+    "mainHeading": "Creating Scroll stopping Motion and Timeless Brand Identities",
+    "contactEmail": "hello@dilichukwundu.com"
+  },
+  "aboutPage": {
+    "aboutHero": "/assets/about-hero.jpg",
+    "bio": [
+      { "text": "I am a multidisciplinary designer focused on creating high-impact visual experiences that bridge the gap between motion and brand identity." },
+      { "text": "With years of experience in motion graphics and brand strategy, I help companies articulate their vision through aggressive brutalist design and fluid animation." }
+    ],
+    "stats": [
+      { "value": "50+", "label": "Projects Completed" },
+      { "value": "12", "label": "Global Brands" },
+      { "value": "4", "label": "Years Experience" }
+    ]
+  },
+  "contactPage": {
+    "heading": "Let's build something extraordinary.",
+    "description": "Currently accepting sophisticated projects spanning globally into 2024. Execute the secure intake form dynamically below or ping me directly across active social nodes.",
+    "socials": [
+      { "platform": "Instagram", "url": "https://instagram.com" },
+      { "platform": "Twitter/X", "url": "https://twitter.com" },
+      { "platform": "LinkedIn", "url": "https://linkedin.com" }
+    ]
+  },
+  "playgroundItems": [
+    { "media": "https://picsum.photos/seed/pg1/800/800" },
+    { "media": "https://picsum.photos/seed/pg2/800/1200" },
+    { "media": "https://picsum.photos/seed/pg3/1200/800" },
+    { "media": "https://picsum.photos/seed/pg4/800/800" }
+  ],
   "portfolioProjects": [
     {
       "caseStudy": {
