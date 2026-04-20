@@ -28,6 +28,9 @@ collections:
                 widget: "object"
                 fields:
                   - {label: "Hero Image Cover", name: "heroImage", widget: "file"}
+                  - {label: "Client Name", name: "client", widget: "string", required: false}
+                  - {label: "Your Role", name: "role", widget: "string", required: false}
+                  - {label: "Project Year", name: "year", widget: "string", required: false}
                   - {label: "Client Challenge Text", name: "clientChallenge", widget: "text"}
                   - {label: "Creative Solution Text", name: "solutionStrategy", widget: "text"}
                   - {label: "Gallery Media", name: "gallery", widget: "list", field: {label: "Gallery Content", name: "image", widget: "file"}}
