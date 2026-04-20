@@ -707,14 +707,19 @@ body {
 
 @media (max-width: 768px) {
     .masonry-grid, .playground-grid {
-        grid-template-columns: 1fr;
-        grid-auto-rows: auto;
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto !important;
+        gap: 16px;
     }
     
     .masonry-card, .playground-img-wrapper {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
         aspect-ratio: 4/5;
+        height: 350px !important; /* Force a consistent height for mobile stacked bento */
     }
 }
+
 
 .masonry-card::after {
     /* Dedicated visual edge-overlay ensuring internal z-index arrays like absolutely positioned images remain perfectly constrained visually without overriding hover calculations natively. */
