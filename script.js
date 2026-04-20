@@ -197,5 +197,26 @@ document.addEventListener('DOMContentLoaded', async () => {
             avatar.style.transform = `translate(0px, 0px) scale(1)`;
         });
     }
+
+    // --- 7. Hamburger Menu Logic ---
+    const hamburger = document.getElementById('hamburger-toggle');
+    const overlay = document.getElementById('mobile-menu-overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (hamburger && overlay) {
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
 });
 
