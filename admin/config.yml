@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main # Deploys directly natively to primary branch
+
+local_backend: true # Allows testing CMS locally using npx decap-server !!
+
+media_folder: "assets"
+public_folder: "/assets"
+
+collections:
+  - name: "database"
+    label: "Portfolio Database"
+    files:
+      - label: "Case Studies List"
+        name: "projects"
+        file: "data.json"
+        fields:
+          - label: "Portfolio Projects"
+            name: "portfolioProjects"
+            widget: "list"
+            fields:
+              - {label: "Unique Project URL Slug (e.g. summit-os)", name: "id", widget: "string"}
+              - {label: "Project Title", name: "title", widget: "string"}
+              - {label: "Short Subtitle Label", name: "desc", widget: "string"}
+              - {label: "Category Tag", name: "tag", widget: "select", options: ["Brand Design", "Motion Design"]}
+              - label: "Case Study Content Data"
+                name: "caseStudy"
+                widget: "object"
+                fields:
+                  - {label: "Hero Image Cover", name: "heroImage", widget: "image"}
+                  - {label: "Client Challenge Text", name: "clientChallenge", widget: "text"}
+                  - {label: "Creative Solution Text", name: "solutionStrategy", widget: "text"}
+                  - {label: "Gallery Media", name: "gallery", widget: "list", field: {label: "Gallery Image", name: "image", widget: "image"}}
