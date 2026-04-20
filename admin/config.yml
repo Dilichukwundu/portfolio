@@ -8,14 +8,14 @@ media_folder: "assets"
 public_folder: "/assets"
 
 collections:
-  - name: "database"
-    label: "Site Database"
+  - name: "projects"
+    label: "Case Studies"
     files:
-      - label: "Project Case Studies"
-        name: "projects"
+      - label: "Portfolio Projects"
+        name: "data"
         file: "data.json"
         fields:
-          - label: "Portfolio Projects"
+          - label: "Projects List"
             name: "portfolioProjects"
             widget: "list"
             fields:
@@ -35,7 +35,10 @@ collections:
                   - {label: "Creative Solution Text", name: "solutionStrategy", widget: "text"}
                   - {label: "Gallery Media", name: "gallery", widget: "list", field: {label: "Gallery Content", name: "image", widget: "file"}}
 
-      - label: "Global Site Settings"
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Global Identity"
         name: "global"
         file: "data.json"
         fields:
@@ -50,8 +53,11 @@ collections:
               - {label: "Home Hero Heading", name: "mainHeading", widget: "text"}
               - {label: "Contact Email", name: "contactEmail", widget: "string"}
 
-      - label: "About Page Content"
-        name: "about"
+  - name: "about"
+    label: "About Page"
+    files:
+      - label: "Biography & Stats"
+        name: "content"
         file: "data.json"
         fields:
           - label: "About Page"
@@ -70,8 +76,11 @@ collections:
                   - {label: "Stat Value (e.g. 50+)", name: "value", widget: "string"}
                   - {label: "Stat Label (e.g. Clients)", name: "label", widget: "string"}
 
-      - label: "Contact Page Content"
-        name: "contact"
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - label: "Contact Content"
+        name: "content"
         file: "data.json"
         fields:
           - label: "Contact Page"
@@ -87,11 +96,15 @@ collections:
                   - {label: "Platform Name", name: "platform", widget: "string"}
                   - {label: "URL", name: "url", widget: "string"}
 
-      - label: "Playground Gallery"
-        name: "playground"
+  - name: "playground"
+    label: "Playground"
+    files:
+      - label: "Grid Gallery"
+        name: "content"
         file: "data.json"
         fields:
           - label: "Playground Grid"
             name: "playgroundItems"
             widget: "list"
             field: {label: "Media (Image/Video)", name: "media", widget: "file"}
+
