@@ -27,7 +27,7 @@ collections:
                 name: "caseStudy"
                 widget: "object"
                 fields:
-                  - {label: "Hero Image Cover", name: "heroImage", widget: "image"}
+                  - {label: "Hero Image Cover", name: "heroImage", widget: "file"}
                   - {label: "Client Challenge Text", name: "clientChallenge", widget: "text"}
                   - {label: "Creative Solution Text", name: "solutionStrategy", widget: "text"}
-                  - {label: "Gallery Media", name: "gallery", widget: "list", field: {label: "Gallery Image", name: "image", widget: "image"}}
+                  - {label: "Gallery Media", name: "gallery", widget: "list", field: {label: "Gallery Content", name: "image", widget: "file"}}

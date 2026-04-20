@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
+    // --- Dynamic Media Resolution Helper ---
+    const renderMediaNode = (src, alt, baseStyles, className = '') => {
+        if (!src) return '';
+        // Explicit logic triggering HTML5 rendering for standard video exports natively bypassing static image restrictions.
+        if (src.toLowerCase().match(/\.(mp4|webm|mov)$/)) {
+            return `<video src="${src}" class="${className}" style="${baseStyles}" autoplay loop muted playsinline></video>`;
+        }
+        return `<img src="${src}" alt="${alt}" class="${className}" style="${baseStyles}">`;
+    };
+
     // --- Dynamic Decap CMS Engine Asynchronous API Map ---
     let projectsData = window.portfolioProjects || []; // Fallback to raw data.js defaults initially
     
@@ -25,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         indexContainer.innerHTML = projectsData.map(p => `
             <a href="project.html?id=${p.id}" style="text-decoration:none;" class="project-card interactive-card">
                 <div class="project-thumb">
-                    <img src="${p.caseStudy.heroImage}" alt="${p.title}" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;">
+                    ${renderMediaNode(p.caseStudy?.heroImage || '', p.title, 'width:100%; height:100%; object-fit:cover; border-radius:inherit;')}
                 </div>
                 <div class="project-text">
                     <h3 class="project-title">${p.title}</h3>
@@ -52,7 +62,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         masonryContainer.innerHTML = filteredProjects.map(p => `
             <a href="project.html?id=${p.id}" style="text-decoration:none;" class="masonry-card interactive-card">
                 <div class="masonry-thumb">
-                    <img src="${p.caseStudy.heroImage}" alt="${p.title}" style="width:100%; height:100%; object-fit:cover; border-radius:inherit;">
+                    ${renderMediaNode(p.caseStudy?.heroImage || '', p.title, 'width:100%; height:100%; object-fit:cover; border-radius:inherit;')}
                 </div>
                 <div class="masonry-text">
                     <h3 class="masonry-title">${p.title}</h3>
@@ -72,28 +82,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         if (project) {
             document.title = `${project.title} - Case Study`;
+            
+            // Map universal media nodes natively parsing Decap's list fields flexibly preserving default offline logic
+            const safeGallery = Array.isArray(project.caseStudy?.gallery) ? project.caseStudy.gallery : (project.caseStudy?.galleryImages || []);
+            const galleryParsed = safeGallery.map(imgData => typeof imgData === 'string' ? imgData : imgData.image);
+
             caseContent.innerHTML = `
-                <img src="${project.caseStudy.heroImage}" alt="${project.title}" class="case-study-hero stagger-in" style="animation-delay: 0.1s">
+                ${renderMediaNode(project.caseStudy?.heroImage || '', project.title, 'animation-delay: 0.1s', 'case-study-hero stagger-in')}
                 
                 <div class="case-meta stagger-in" style="animation-delay: 0.2s">
-                    <div class="meta-item"><span class="meta-label">Client</span><span class="meta-value">${project.caseStudy.client}</span></div>
-                    <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">${project.caseStudy.role}</span></div>
-                    <div class="meta-item"><span class="meta-label">Year</span><span class="meta-value">${project.caseStudy.year}</span></div>
-                    <div class="meta-item"><span class="meta-label">Discipline</span><span class="meta-value">${project.tag}</span></div>
+                    <div class="meta-item"><span class="meta-label">Client</span><span class="meta-value">${project.caseStudy?.client || ''}</span></div>
+                    <div class="meta-item"><span class="meta-label">Role</span><span class="meta-value">${project.caseStudy?.role || ''}</span></div>
+                    <div class="meta-item"><span class="meta-label">Year</span><span class="meta-value">${project.caseStudy?.year || ''}</span></div>
+                    <div class="meta-item"><span class="meta-label">Discipline</span><span class="meta-value">${project.tag || ''}</span></div>
                 </div>
 
                 <div class="case-section stagger-in" style="animation-delay: 0.3s">
                     <h3>The Challenge</h3>
-                    <p>${project.caseStudy.challenge}</p>
+                    <p>${project.caseStudy?.challenge || project.caseStudy?.clientChallenge || ''}</p>
                 </div>
                 
                 <div class="case-section stagger-in" style="animation-delay: 0.4s">
                     <h3>The Solution</h3>
-                    <p>${project.caseStudy.solution}</p>
+                    <p>${project.caseStudy?.solution || project.caseStudy?.solutionStrategy || ''}</p>
                 </div>
 
                 <div class="case-gallery stagger-in" style="animation-delay: 0.5s">
-                    ${project.caseStudy.galleryImages.map(img => `<img src="${img}" alt="Gallery Architecture" class="stagger-in" style="animation-delay: 0.6s">`).join('')}
+                    ${galleryParsed.map(src => renderMediaNode(src, 'Gallery Media', 'animation-delay: 0.6s; width: 100%; border-radius: var(--radius-lg);', 'stagger-in')).join('')}
                 </div>
             `;
         } else {
