@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', async () => {
 
     // --- Dynamic Media Resolution Helper ---
-    const renderMediaNode = (src, alt, baseStyles = '', className = '') => {
+    const renderMediaNode = (src, alt, baseStyles = '', className = '', controls = true) => {
         if (!src) return '';
         if (src.toLowerCase().match(/\.(mp4|webm|mov)$/)) {
-            return `<video src="${src}" class="${className}" style="${baseStyles}" autoplay loop muted playsinline></video>`;
+            return `<video src="${src}" class="${className}" style="${baseStyles}" ${controls ? 'controls' : 'autoplay loop muted playsinline'}></video>`;
         }
         return `<img src="${src}" alt="${alt}" class="${className}" style="${baseStyles}">`;
     };
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         indexContainer.innerHTML = projectsData.map(p => `
             <a href="project.html?id=${p.id}" style="text-decoration:none;" class="project-card interactive-card">
                 <div class="project-thumb">
-                    ${renderMediaNode(p.caseStudy?.heroImage || '', p.title, 'width:100%; height:100%; object-fit:cover; border-radius:inherit;')}
+                    ${renderMediaNode(p.caseStudy?.heroImage || '', p.title, 'width:100%; height:100%; object-fit:cover; border-radius:inherit;', '', false)}
                 </div>
                 <div class="project-text">
                     <h3 class="project-title">${p.title}</h3>
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         masonryContainer.innerHTML = filteredProjects.map(p => `
             <a href="project.html?id=${p.id}" style="text-decoration:none;" class="masonry-card interactive-card">
                 <div class="masonry-thumb">
-                    ${renderMediaNode(p.caseStudy?.heroImage || '', p.title, 'width:100%; height:100%; object-fit:cover; border-radius:inherit;')}
+                    ${renderMediaNode(p.caseStudy?.heroImage || '', p.title, 'width:100%; height:100%; object-fit:cover; border-radius:inherit;', '', false)}
                 </div>
                 <div class="masonry-text">
                     <h3 class="masonry-title">${p.title}</h3>
