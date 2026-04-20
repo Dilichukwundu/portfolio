@@ -1,112 +1,18 @@
 {
   "portfolioProjects": [
     {
-      "id": "vent-africa",
-      "title": "Vent Africa",
-      "desc": "Evocative motion design establishing digital edge",
-      "tag": "Motion Design",
       "caseStudy": {
-        "heroImage": "https://picsum.photos/seed/vent1/1200/800",
-        "client": "Vent Africa Ltd.",
-        "role": "Motion Director",
-        "year": "2023",
-        "clientChallenge": "Vent Africa required a hyper-modern motion logic system to signify their pivot into the digital infrastructure market without relying on predictable tech clichés.",
-        "solutionStrategy": "We designed a brutalist web system using raw typography and smooth glassmorphic transition states, focusing on subtle edge-glow mechanics and deep-black contrast.",
+        "heroImage": "/assets/dsc_0257f.png",
         "gallery": [
-          { "image": "https://picsum.photos/seed/vent2/1200/800" },
-          { "image": "https://picsum.photos/seed/vent3/1200/800" }
-        ]
-      }
-    },
-    {
-      "id": "centrova",
-      "title": "Centrova",
-      "desc": "Timeless brand identity mapping global futures",
-      "tag": "Brand Design",
-      "caseStudy": {
-        "heroImage": "https://picsum.photos/seed/centrova1/1200/800",
-        "client": "Centrova Holdings",
-        "role": "Lead Designer",
-        "year": "2024",
-        "clientChallenge": "Establishing a visual identity that translated trust and immense scale for a massive global logistics holdings company.",
-        "solutionStrategy": "By stripping away the color palette entirely, we relied on monolithic geometric structures and strict Swiss grid systems to communicate absolute structural authority.",
-        "gallery": [
-          { "image": "https://picsum.photos/seed/centrova2/1200/800" },
-          { "image": "https://picsum.photos/seed/centrova3/1200/800" }
-        ]
-      }
-    },
-    {
-      "id": "send-afrique",
-      "title": "Send Afrique",
-      "desc": "Pioneering motion graphics for financial inclusion",
-      "tag": "Motion Design",
-      "caseStudy": {
-        "heroImage": "https://picsum.photos/seed/send1/1200/800",
-        "client": "Send Afrique",
-        "role": "Art Director",
-        "year": "2023",
-        "clientChallenge": "The brand needed to resonate with young digital nomads crossing borders while retaining the absolute security expected from a financial app.",
-        "solutionStrategy": "We engineered smooth micro-animations simulating fluid mechanics across their payment workflows to visually imply zero-friction transactions.",
-        "gallery": [
-          { "image": "https://picsum.photos/seed/send2/1200/800" },
-          { "image": "https://picsum.photos/seed/send3/1200/800" }
-        ]
-      }
-    },
-    {
-      "id": "future-wave",
-      "title": "Future Wave",
-      "desc": "Ushering in a new era of responsive design",
-      "tag": "Motion Design",
-      "caseStudy": {
-        "heroImage": "https://picsum.photos/seed/wave1/1200/800",
-        "client": "Wave Industries",
-        "role": "Interactive Designer",
-        "year": "2024",
-        "clientChallenge": "Adapting an inherently complex technical 3D product into an accessible 2D mobile reading experience.",
-        "solutionStrategy": "We utilized continuous scrolling architectures mixed with Rive animations to dynamically unwrap their products as users read the documentation.",
-        "gallery": [
-          { "image": "https://picsum.photos/seed/wave2/1200/800" },
-          { "image": "https://picsum.photos/seed/wave3/1200/800" }
-        ]
-      }
-    },
-    {
-      "id": "apex-structures",
-      "title": "Apex Structures",
-      "desc": "Accelerating structural components through motion",
-      "tag": "Motion Design",
-      "caseStudy": {
-        "heroImage": "https://picsum.photos/seed/apex1/1200/800",
-        "client": "Apex OS",
-        "role": "Motion Director",
-        "year": "2022",
-        "clientChallenge": "Making highly technical enterprise server architectures engaging to a general audience via marketing sites.",
-        "solutionStrategy": "We deployed hyper-kinetic typographic explosions mapped directly to mouse coordinates to create a visceral interactive presence.",
-        "gallery": [
-          { "image": "https://picsum.photos/seed/apex2/1200/800" },
-          { "image": "https://picsum.photos/seed/apex3/1200/800" }
-        ]
-      }
-    },
-    {
-      "id": "lumina",
-      "title": "Lumina",
-      "desc": "Radiant brand architectures expanding perception",
-      "tag": "Brand Design",
-      "caseStudy": {
-        "heroImage": "https://picsum.photos/seed/lumina1/1200/800",
-        "client": "Lumina Creative",
-        "role": "Brand Strategist",
-        "year": "2024",
-        "clientChallenge": "Differentiating a new creative agency in an extremely saturated market of minimal-black-and-white studios.",
-        "solutionStrategy": "We embraced loud, aggressive brutalism and physically grounded design languages, intentionally avoiding clean corporate vectors in favor of stark realism.",
-        "gallery": [
-          { "image": "https://picsum.photos/seed/lumina2/1200/800" },
-          { "image": "https://picsum.photos/seed/lumina3/1200/800" }
-        ]
-      }
+          "/assets/comp-7.mp4"
+        ],
+        "clientChallenge": "dlknmklsdb  dm,s mcm,vsdm  vċsdm, v msdklnnslndmnkl;mnmdsaklfkdksklfnsamnmklmalm,l;msdfnjbnf mdnf jknadsl;mlmasmd",
+        "solutionStrategy": "sadkmnklnaklskldnflkasdklnaslkdmnklaskldnmkbfjkbsakalsdfmas,ckln mscmbnjfn klasfkjldnalksnfdklnsfklnkjnfkanfksfn"
+      },
+      "id": "smada",
+      "title": "Smada",
+      "desc": "bjkhbejgfdsjknfhuifgfbndsjbjvbjkds",
+      "tag": "Motion Design"
     }
   ]
 }
